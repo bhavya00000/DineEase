@@ -22,7 +22,10 @@ const Navbar = () => {
               </Link>
             ))}
           </div>
+          <a href="https://menu-dineease.vercel.app/">
+
         <button className="menuBtn">OUR MENU</button>
+          </a>
       </div> 
       <div className="hamburger" onClick={()=> setShow(!show)}>
         <GiHamburgerMenu/>
