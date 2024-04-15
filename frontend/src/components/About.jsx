@@ -21,7 +21,7 @@ const About = () => {
               iusto ipsum qui dolore ex, accusantium repellat mollitia
               repellendus.
             </p>
-            <Link to="https://drive.google.com/file/d/108u9RiwNH77kO6wf_POIaC_X2w1amd1n/view" target="_blank" rel="noopener noreferrer">
+            <Link to="https://menu-dineease.vercel.app/" target="_blank" rel="noopener noreferrer">
               Explore Menu{""}
               <span>
                 <HiOutlineArrowRight />
