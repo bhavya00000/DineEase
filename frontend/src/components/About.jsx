@@ -13,15 +13,11 @@ const About = () => {
               <p>The only thing we're serious about is food.</p>
             </div>
             <p className="mid">
-              Lorem ipsum dolor sit, amet consectetur adipisicing elit.
-              Provident possimus optio adipisci dolores impedit illum iusto
-              perferendis, laudantium quod accusamus consequuntur consectetur,
-              tempore nulla error iure reiciendis dolorem assumenda.
-              Necessitatibus fugit asperiores totam rem esse exercitationem
-              iusto ipsum qui dolore ex, accusantium repellat mollitia
-              repellendus.
+            Welcome to Dine Ease, the online hub for our restaurant's reservation services.We're dedicated to providing exceptional dining experiences with ease. 
+            Discover the perfect table for any occasion, whether it's a romantic dinner, a gathering with friends or a business meeting. With just a few clicks, you can secure your spot and look forward to savoring our culinary delights. 
+            Experience hassle-free dining at our Restaurant. Reserve your table today and let us take care of the rest. We can't wait to welcome you!
             </p>
-            <Link to="https://drive.google.com/file/d/108u9RiwNH77kO6wf_POIaC_X2w1amd1n/view" target="_blank" rel="noopener noreferrer">
+            <Link to="https://menu-dineease.vercel.app/" target="_blank" rel="noopener noreferrer">
               Explore Menu{""}
               <span>
                 <HiOutlineArrowRight />

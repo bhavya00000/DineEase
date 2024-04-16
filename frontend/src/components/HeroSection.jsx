@@ -24,7 +24,7 @@ const HeroSection = () => {
             </div>
             <div className="banner">
                 <div className="imageBox">
-                    <img src="/hero2.png" alt="hero2" />
+                    <img src="/hero3.png" alt="hero2" />
                 </div>
                 <h1 className="title dishes_title">Dishes</h1>
             </div>
@@ -33,5 +33,6 @@ const HeroSection = () => {
     </section>
   )
 }
+
 
 export default HeroSection
