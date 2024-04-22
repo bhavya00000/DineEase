@@ -5,40 +5,23 @@
                 "id": 1,
                 "image": "./quality_food.svg",
                 "title": "QUALITY FOOD",
-                "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Officiis repellendus officia qui repellat." 
+                "description": "Indulge in our carefully curated menu crafted with fresh, high-quality ingredients to ensure a delicious and satisfying dining experience." 
             },
             {
                 "id": 2,
                 "image": "./super_taste.svg",
                 "title": "SUPER TASTE",
-                "description": "Lorem ipsum dolor sit amet consectetur, adipisicing sit amet elit. Sit voluptates quaerat pariatur." 
+                "description": "Delight your senses with dishes prepared to perfection, featuring an exquisite blend of flavors and textures that promise to tantalize your taste buds." 
             },
             {
                 "id": 3,
                 "image": "./fast_delivery.svg",
                 "title": "FAST DELIVERY",
-                "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Officiis repellendus officia qui repellat." 
+                "description": "Enjoy the convenience of booking your table online effortlessly, guaranteeing a seamless and hassle-free dining experience from reservation to the moment you savor our delectable cuisine." 
             }
         ],
         "dishes": [
-            {
-                "id": 1,
-                "image": "./dinner1.jpeg",
-                "title": "ROASTED LAMB RUMP",
-                "category": "Dinner"
-            },
-            {
-                "id": 2,
-                "image": "./dinner2.png",
-                "title": "CITRUS CURED SALMON",
-                "category": "Dinner"
-            },
-            {
-                "id": 3,
-                "image": "./breakfast1.png",
-                "title": "PAN SEARED SEA BASS",
-                "category": "Breakfast"
-            },
+            
             {
                 "id": 4,
                 "image": "./dinner3.png",
@@ -48,13 +31,13 @@
             {
                 "id": 5,
                 "image": "./lunch1.png",
-                "title": "BEEF BURGER MEAL",
+                "title": "BURGER MEAL",
                 "category": "Lunch"
             },
             {
                 "id": 6,
                 "image": "./dinner4.png",
-                "title": "MUSSELS SOUP",
+                "title": "SOUP",
                 "category": "Dinner"
             },
             {
@@ -62,13 +45,8 @@
                 "image": "./dinner5.png",
                 "title": "ITALIAN SPAGHETTI",
                 "category": "Dinner"
-            },
-            {
-                "id": 8,
-                "image": "./dinner6.png",
-                "title": "GRILLED FISH",
-                "category": "Dinner"
             }
+            
         ],
         "team": [
             {
@@ -169,6 +147,82 @@
             }
         ]
     
-    } 
+    },
+    
+    {
+        "ourmenu": [
+          {
+            "id": 1,
+            "image": "https://www.recipetineats.com/wp-content/uploads/2021/08/Garden-Salad_47-SQ.jpg",
+            "title": "Salad",
+            "category": "Starter",
+            "subItems": ["Green Salad", "Caesar Salad", "Fruit Salad"]
+          },
+          {
+            "id": 2,
+            "image": "https://i2.wp.com/www.downshiftology.com/wp-content/uploads/2023/09/Vegetable-Soup-main.jpg",
+            "title": "Soup",
+            "category": "Starter",
+            "subItems": ["Tomato Soup", "Chicken Noodle Soup", "Vegetable Soup"]
+          },
+          {
+            "id": 3,
+            "image": "https://5.imimg.com/data5/NK/UA/GLADMIN-29857013/starter-500x500.jpg",
+            "title": "Starter",
+            "category": "Starter",
+            "subItems": ["Bruschetta", "Mozzarella Sticks", "Spring Rolls"]
+          },
+          {
+            "id": 4,
+            "image": "https://i0.wp.com/homequirer.com/wp-content/uploads/2022/11/Best-Indian-Appetizers-scaled-1.jpg?fit=2560%2C1700&ssl=1",
+            "title": "Indian Appetizers",
+            "category": "Appetizer",
+            "subItems": ["Samosa", "Paneer Tikka", "Aloo Tikki"]
+          },
+          {
+            "id": 5,
+            "image": "https://www.southernliving.com/thmb/3x3cJaiOvQ8-3YxtMQX0vvh1hQw=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/2652401_QFSSL_SupremePizza_00072-d910a935ba7d448e8c7545a963ed7101.jpg",
+            "title": "Pizza",
+            "category": "Main Course",
+            "subItems": ["Margherita", "Pepperoni", "Vegetarian"]
+          },
+          {
+            "id": 6,
+            "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSalvsaJWjWWgwE6RMKa5YwRETwAm3K7Weo5YIKKc-M7A&s",
+            "title": "Pasta",
+            "category": "Main Course",
+            "subItems": ["Spaghetti Bolognese", "Fettuccine Alfredo", "Penne Arrabbiata"]
+          },
+          {
+            "id": 7,
+            "image": "https://www.blueosa.com/wp-content/uploads/2020/01/the-best-top-10-indian-dishes.jpg",
+            "title": "Main Course",
+            "category": "Main Course",
+            "subItems": ["Grilled Chicken", "Fish Curry", "Veg Biryani"]
+          },
+          {
+            "id": 8,
+            "image": "https://minuterice.com/wp-content/uploads/2022/03/Southwest-Barbeque-Salmon-and-White-Rice-035-16x9-1-1080x675.jpg",
+            "title": "Rice Bowls",
+            "category": "Main Course",
+            "subItems": ["Teriyaki Chicken Rice Bowl", "Vegetable Fried Rice", "Shrimp Curry Rice"]
+          },
+          {
+            "id": 9,
+            "image": "https://www.tutorialspoint.com/food_and_beverage_services/images/non_alcoholic_beverages.jpg",
+            "title": "Beverages",
+            "category": "Drinks",
+            "subItems": ["Iced Tea", "Lemonade", "Mango Smoothie"]
+          },
+          {
+            "id": 10,
+            "image": "https://www.southernliving.com/thmb/HFXfirNv58YxjV2uWi4Ima6rkD4=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/2665601_ErinN_0213-2000-7b88f1a2e1bd40bba7070fc01476cf3d.jpg",
+            "title": "Desserts",
+            "category": "Dessert",
+            "subItems": ["Chocolate Cake", "Tiramisu", "Cheesecake"]
+          }
+        ]
+      }
+    
     ]
 }

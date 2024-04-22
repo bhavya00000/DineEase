@@ -1,28 +1,35 @@
-import express, { urlencoded } from 'express';
+import express from 'express';
 import cors from 'cors';
-import dotenv from 'dotenv'
+import dotenv from 'dotenv';
 import { dbconnection } from './database/dbconnection.js';
-import { errorMiddleware } from './error/error.js'
-import reservationRouter from './routes/reservationRoute.js'
+import { errorMiddleware } from './error/error.js';
+import reservationRouter from './routes/reservationRoute.js';
 
+dotenv.config({ path: './config/config.env' });
 
 const app = express();
-dotenv.config({path: './config/config.env'});
+const port = process.env.PORT || 8080;
 
-app.use(
-    cors({
-        origin: [process.env.FRONTEND_URL],
-        method: ["POST"],
-        credentials: true,
-    })
-);
-
-
+// Middleware
+app.use(cors({
+    origin: [process.env.FRONTEND_URL],
+    methods: ["POST"],
+    credentials: true,
+}));
 app.use(express.json());
-app.use(express.urlencoded({extended: true}))
+app.use(express.urlencoded({ extended: true }));
 
-app.use('/api/v1/reservation', reservationRouter)
+// Routes
+app.use("/api/v1/reservation", reservationRouter);
+
+// Error middleware
+app.use(errorMiddleware);
+
+// Database connection
 dbconnection();
 
-app.use(errorMiddleware);
+app.listen(port, () => {
+    console.log(`Listening on port ${port}...`);
+});
+
 export default app;

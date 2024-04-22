@@ -2,6 +2,7 @@ import React, { useState } from 'react'
 import { Link } from 'react-scroll'
 import { GiHamburgerMenu } from 'react-icons/gi'
 import { data } from '../restApi.json'
+import { Link as RouterLink } from 'react-router-dom';
 const Navbar = () => {
   const [show, setShow] = useState(false);
   return (
@@ -22,10 +23,10 @@ const Navbar = () => {
               </Link>
             ))}
           </div>
-          <a href="https://menu-dineease.vercel.app/">
+          <RouterLink to ="/NewMenu">
 
             <button className="menuBtn">OUR MENU</button>
-          </a>
+          </RouterLink>
         </div>
         <div className="hamburger" onClick={() => setShow(!show)}>
           <GiHamburgerMenu />

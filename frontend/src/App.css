@@ -11,6 +11,36 @@
   display: none;
 }
 
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes scaleIn {
+  from {
+    opacity: 0;
+    transform: scale(0.9);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+@keyframes slideUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
 
 
 /********************** HERO SECTION COMPONENT STYLING **************************/
@@ -28,6 +58,8 @@ nav {
   border-bottom-right-radius: 7px;
   border-bottom-left-radius: 7px;
   background-color: rgba(255, 255, 255, 0.9);
+  transform: translateY(-100%);
+  animation: slideInNav 0.5s forwards;
 }
 nav::after {
   content: "";
@@ -163,7 +195,99 @@ nav svg {
     border-radius: 0;
   }
 }
+
+@keyframes slideInNav {
+  from {
+    transform: translateY(-100%);
+  }
+  to {
+    transform: translateY(0);
+  }
+}
+
 /**********************************************************************************************************************/
+/********************OURMENU COMPONENT STYLING **************************/
+.OurMenu {
+  text-align: center;
+  padding: 20px;
+  opacity: 0;
+  transform: scale(0.9);
+  animation: scaleIn 0.5s forwards;
+}
+
+.OurMenu .title {
+  font-size: 24px;
+  margin-bottom: 20px;
+}
+
+.OurMenu .photos {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 20px;
+  height: 700px;
+}
+
+.OurMenu .food-profile {
+  position: relative;
+  overflow: hidden;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.OurMenu .food-profile img {
+  width: 100%;
+  border-radius: 10px 10px 0 0;
+  height: 200px;
+}
+
+.OurMenu .actions {
+  top: 10px;
+  right: 10px;
+}
+
+.OurMenu .reactions,
+.OurMenu .like,
+.OurMenu .dislike {
+  border: none;
+  background-color: transparent;
+  font-size: 24px;
+  cursor: pointer;
+}
+
+.OurMenu .reactions,
+.OurMenu .like.active,
+.OurMenu .dislike.active {
+  color: red;
+}
+
+.OurMenu .reactions {
+  position: auto;
+  display: flex;
+  justify-content: space-between;
+  padding: 10px;
+  background-color: #f7f7f7;
+}
+
+.OurMenu .food-name {
+  margin: 10px 0;
+}
+
+.OurMenu .dropdown-content {
+  display: none;
+  position: relative;
+  background-color: #f9f9f9;
+  min-width: 160px;
+}
+
+.OurMenu .dropdown-content,
+.OurMenu .sub-food-items {
+  display: grid;
+  margin-top: 1px;
+  gap: 1px;
+  padding: 10px;
+}
+
+
 
 /********************** HERO SECTION COMPONENT STYLING **************************/
 /**********************************************************************************************************************/
@@ -207,6 +331,17 @@ nav svg {
 .heroSection .container .banner .title {
   font-size: 8.5rem;
   font-weight: 200;
+  opacity: 0;
+  animation: fadeInText 3s forwards;
+}
+
+@keyframes fadeInText {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
 }
 /* Example for text hover transition */
 .heroSection .container .banner .title {
@@ -227,7 +362,18 @@ nav svg {
   height: 50%;
   width: 70%;
   margin-left: 70px;
+  animation: fadeInText 3s forwards;
 }
+
+@keyframes spinLogo {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
 .heroSection .container .banner .textWithSvg {
   position: relative;
 }
@@ -235,6 +381,7 @@ nav svg {
   position: absolute;
   right: 0;
   top: 0;
+  animation: spinLogo 1s linear;
 }
 .heroSection .container .banner:first-child .dishes_title {
   display: none;
@@ -250,6 +397,8 @@ nav svg {
 .heroSection .container .banner .imageBox img {
   width: 300px;
   height: 385px;
+  opacity: 0;
+  animation: fadeInText 3s forwards;
 }
 .heroSection .container .banner:last-child .imageBox {
   text-align: end;
@@ -372,7 +521,11 @@ nav svg {
   justify-content: center;
   align-items: center;
   background-color: #f9fbf2;
+  opacity: 0;
+  transform: scale(0.9);
+  animation: scaleIn 0.5s forwards;
 }
+
 .about .container {
   max-width: 1500px;
   min-width: 1500px;
@@ -395,7 +548,19 @@ nav svg {
 
 .about .container .banner img {
   width: 100%;
+  animation: spinLogo 5s infinite linear;
+  
 }
+
+@keyframes spinLogo {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
 .heading {
   font-weight: 200;
   font-size: 4rem;
@@ -492,6 +657,9 @@ nav svg {
   padding: 75px 20px;
   justify-content: center;
   align-items: center;
+  opacity: 0;
+  transform: scale(0.9);
+  animation: scaleIn 0.5s forwards;
 }
 .qualities .container {
   min-width: 1500px;
@@ -564,6 +732,9 @@ nav svg {
   justify-content: center;
   align-items: center;
   padding: 50px 20px;
+  opacity: 0;
+  transform: translateY(20px);
+  animation: slideUp 5s forwards infinite;
 }
 .menu .container {
   max-width: 1500px;
@@ -604,6 +775,12 @@ nav svg {
   width: 100%;
   height: 370px;
 }
+.menu .container .dishes_container .card:hover img {
+  transform: scale(1.05);
+  transition: transform 0.3s ease;
+}
+
+
 .menu .container .dishes_container .card h3 {
   font-size: 1.5rem;
   font-weight: 500;
@@ -668,6 +845,9 @@ nav svg {
   justify-content: center;
   align-items: center;
   padding: 20px;
+  opacity: 0;
+  transform: scale(0.9);
+  animation: scaleIn 0.5s forwards;
 }
 .team .container {
   max-width: 1500px;
@@ -751,6 +931,8 @@ nav svg {
   justify-content: center;
   align-items: center;
   min-height: 80vh;
+  transform: scale(0.9);
+  animation: scaleIn 5s forwards infinite; 
 }
 .who_are_we .container {
   max-width: 1500px;
@@ -840,6 +1022,9 @@ footer {
   align-items: center;
   height: fit-content;
   padding: 20px 20px 10px 20px;
+  opacity: 0;
+  transform: translateY(20px);
+  animation: slideUp 0.5s forwards;
 }
 footer .container {
   max-width: 1500px;
@@ -919,6 +1104,9 @@ footer .container .banner .right {
   background-repeat: no-repeat;
   background-size: cover;
   background-position: right;
+  opacity: 0;
+  transform: translateY(20px);
+  animation: slideUp 0.5s forwards ;
 }
 .reservation .container {
   max-width: 1500px;

@@ -1,5 +1,6 @@
 import React from "react";
-import { Link } from "react-router-dom";
+// import { Link } from "react-router-dom";
+import { Link as RouterLink } from 'react-router-dom';
 import { HiOutlineArrowRight } from "react-icons/hi";
 
 const About = () => {
@@ -17,12 +18,12 @@ const About = () => {
             Discover the perfect table for any occasion, whether it's a romantic dinner, a gathering with friends or a business meeting. With just a few clicks, you can secure your spot and look forward to savoring our culinary delights. 
             Experience hassle-free dining at our Restaurant. Reserve your table today and let us take care of the rest. We can't wait to welcome you!
             </p>
-            <Link to="https://menu-dineease.vercel.app/" target="_blank" rel="noopener noreferrer">
+            <RouterLink to="/NewMenu" target="_blank" rel="noopener noreferrer">
               Explore Menu{""}
               <span>
                 <HiOutlineArrowRight />
               </span>
-            </Link>
+            </RouterLink>
           </div>
           <div className="banner">
             <img src="about.png" alt="about" />

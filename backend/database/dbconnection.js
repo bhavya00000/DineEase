@@ -9,4 +9,3 @@ export const dbconnection = () =>{
         console.log(`Some error occurred while connecting the database! ${err}`);
     })
 }
-
