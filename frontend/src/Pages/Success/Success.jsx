@@ -10,7 +10,7 @@ const Success = () => {
       setCountdown((preCount) => {
         if (preCount === 1) {
           clearInterval(timeoutId);
-          navigate("/");
+          navigate("/after");
         }
         return preCount - 1;
       });
@@ -24,7 +24,7 @@ const Success = () => {
         <div className="container">
           <img src="/sandwich.png" alt="success" />
           <h1>Redirecting to Home in {countdown} seconds...</h1>
-          <Link to={"/"}>
+          <Link to={"/after"}>
             Back to Home <HiOutlineArrowNarrowRight />
           </Link>
         </div>

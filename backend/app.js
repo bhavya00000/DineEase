@@ -1,16 +1,16 @@
-import express from 'express';
+
+import express, { urlencoded } from 'express';
 import cors from 'cors';
-import dotenv from 'dotenv';
+import dotenv from 'dotenv'
 import { dbconnection } from './database/dbconnection.js';
-import { errorMiddleware } from './error/error.js';
-import reservationRouter from './routes/reservationRoute.js';
+import { errorMiddleware } from './error/error.js'
+import reservationRouter from './routes/reservationRoute.js'
 import userRoutes from './routes/users.js'
 import authRoutes from './routes/auth.js'
 
-dotenv.config({ path: './config/config.env' });
 
 const app = express();
-const port = process.env.PORT || 8080;
+dotenv.config({path: './config/config.env'});
 
 app.use(
     cors({
@@ -33,8 +33,5 @@ dbconnection();
 
 
 
-
-
-
-
+app.use(errorMiddleware);
 export default app;
