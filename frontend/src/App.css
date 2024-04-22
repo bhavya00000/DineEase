@@ -86,6 +86,7 @@ nav .navLinks {
   display: flex;
   justify-content: space-between;
   align-items: center;
+
 }
 nav .navLinks .links {
   display: flex;
@@ -113,6 +114,8 @@ nav .menuBtn {
   border: 1px solid #333;
   border-radius: 20px;
   font-size: 16px;
+  margin-right: 10px;
+
 }
 nav .menuBtn:hover {
   color: #fff;
@@ -1230,6 +1233,34 @@ footer .container .banner .right {
   background: transparent;
   margin-top: 30px;
 }
+
+.reservation .container .banner .reservation_form_box{
+  align-items: center;
+
+}
+
+.reservation .container .banner .reservation_form_box button {
+  border: 1px solid black;
+  padding: 8px 36px;
+  border-radius: 30px;
+  display: flex;
+  width: fit-content;
+  margin: 0 auto;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+  font-size: 13px;
+  color: #111;
+  background: transparent;
+  margin-top: 30px;
+  align-items: center;
+  cursor: pointer;
+}
+.reservation .container .banner .reservation_form_box button:hover {
+  background-color: #000000;
+  color: #fff;
+}
+
 .reservation .container .banner .reservation_form_box form button span {
   margin-left: 1rem;
   padding: 3px;
