@@ -4,6 +4,8 @@ import dotenv from 'dotenv'
 import { dbconnection } from './database/dbconnection.js';
 import { errorMiddleware } from './error/error.js'
 import reservationRouter from './routes/reservationRoute.js'
+import userRoutes from './routes/users.js'
+import authRoutes from './routes/auth.js'
 
 
 const app = express();
@@ -17,12 +19,18 @@ app.use(
     })
 );
 
-
+//middleware
 app.use(express.json());
 app.use(express.urlencoded({extended: true}))
 
-app.use('/api/v1/reservation', reservationRouter)
+app.use('/api/v1/reservation', reservationRouter);
+
+
+app.use("/api/v1/users", userRoutes);
+app.use("/api/v1/auth", authRoutes);
 dbconnection();
+
+
 
 app.use(errorMiddleware);
 export default app;
