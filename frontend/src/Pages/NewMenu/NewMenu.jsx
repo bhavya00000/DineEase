@@ -4,7 +4,7 @@ import OurMenu from '../../components/OurMenu';
 const NewMenu = () => {
   return (
     <div>
-
+      
       <OurMenu />
     </div>
   );
