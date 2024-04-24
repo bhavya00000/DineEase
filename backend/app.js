@@ -1,4 +1,3 @@
-
 import express, { urlencoded } from 'express';
 import cors from 'cors';
 import dotenv from 'dotenv'
@@ -33,9 +32,5 @@ app.use("/api/v1/auth", authRoutes);
 dbconnection();
 
 
-
-
-
-
-
+app.use(errorMiddleware);
 export default app;
