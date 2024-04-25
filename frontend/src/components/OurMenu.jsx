@@ -33,18 +33,19 @@ const OurMenu = () => {
   };
 
   return (
-    <div className="OurMenu">
+    <div className="OurMenu" >
       <h1 className="title">Dishes</h1>
-      <div className="photos">
+      <div className="photos" >
         {foodImages.map((image, index) => (
-          <div key={index} className="food-profile">
+          <div key={index} className="food-profile" >
             <img src={image} alt={foodNames[index]} />
             <div className="reactions">
+              
+              <span className="counts" style={{padding:"2px 6px"}}>{counts[index]}</span>
               <div className="actions">
-                <button className="like" onClick={() => incrementLike(index)}>👍</button>
-                <button className="dislike" onClick={() => decrementDislike(index)}>👎</button>
+                <button className="like" style={{fontSize:"30px", padding:"2px 6px"}} onClick={() => incrementLike(index)}>+</button>
+                <button className="dislike" style={{fontSize:"30px"}} onClick={() => decrementDislike(index)}>-</button>
               </div>
-              <span className="counts">{counts[index]}</span>
             </div>
             <div className='dropdown-content'>
               <button onClick={() => handleCategorySelect(foodNames[index])}>{foodNames[index]}</button>
