@@ -1,6 +1,6 @@
 import { Router } from "express";
 import { User } from "../models/user.js";
-import bcrypt from "bcrypt";
+import bcrypt from "bcryptjs";  // Updated to use bcryptjs
 import Joi from "joi";
 
 const router = Router();
