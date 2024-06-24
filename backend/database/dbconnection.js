@@ -1,26 +1,31 @@
-import mongoose from "mongoose";
+import mongoose from 'mongoose';
 
-export const dbconnection = () =>{
-    mongoose.connect(process.env.MONGO_URL,{
-        dbName: "Restaurant"
-    }).then(()=>{
-        console.log("Connected to database success.");
-    }).catch(()=>{
-        console.log(`Some error occurred while connecting the database! ${err}`);
+export const dbconnection = () => {
+  const options = {
+    useNewUrlParser: true,
+    useUnifiedTopology: true,
+    dbName: "Restaurant"
+  };
+
+  mongoose.connect(process.env.MONGO_URL, options)
+    .then(() => {
+      console.log('Connected to the Restaurant database successfully');
+    })
+    .catch((err) => {
+      console.error(`Error occurred while connecting to the Restaurant database: ${err}`);
     });
 
-    mongoose.connect(process.env.MONGO_URL, {
-        dbName: "users",
-        useNewUrlParser: true,
-        useUnifiedTopology: true
-    }).then(() => {
-        console.log("Connected to database successfully");
-    }).catch((err) => {
-        console.log(`Some error occurred while connecting to the database: ${err}`);
+  const userOptions = {
+    useNewUrlParser: true,
+    useUnifiedTopology: true,
+    dbName: "users"
+  };
+
+  mongoose.connect(process.env.MONGO_URL, userOptions)
+    .then(() => {
+      console.log('Connected to the Users database successfully');
+    })
+    .catch((err) => {
+      console.error(`Error occurred while connecting to the Users database: ${err}`);
     });
-
-    
-}
-
-
-
+};
