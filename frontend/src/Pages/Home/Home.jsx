@@ -38,7 +38,7 @@ const Home = () => {
         const token = localStorage.getItem('token');
         if (token) {
           // Verify token validity by sending a request to the server
-          const url = 'http://localhost:4000/api/v1/auth'; // Replace with your verification endpoint
+          const url = 'https://backend-i98n.onrender.com/api/v1/auth'; // Replace with your verification endpoint
           const response = await axios.post(url, { token });
           if (response.data.valid) {
             setIsLoggedIn(true);

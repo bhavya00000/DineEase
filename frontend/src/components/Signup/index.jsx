@@ -20,7 +20,7 @@ const Signup = () => {
 	const handleSubmit = async (e) => {
 		e.preventDefault();
 		try {
-			const url = "http://localhost:4000/api/v1/users/send";
+			const url = "https://backend-i98n.onrender.com/api/v1/users/send";
 			const { data: res } = await axios.post(url, data);
 			navigate("/login");
 			console.log(res.message);
